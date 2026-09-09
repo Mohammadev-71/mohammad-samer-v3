@@ -14,25 +14,33 @@ import {
 import { useTranslations } from "next-intl";
 import CommentBox from "../../components/commentBox";
 import ProjectCardLoading from "../../components/loadingsComponents/ProjectCardLoading";
+import { ProjectType } from "@/src/generated/prisma/enums";
+import { useLocale } from "next-intl";
+
+
 
 interface Project {
   id: string;
-  title: string;
-  description: string | null;
+  titleEn: string;
+  titleAr: string | null ;
+  descriptionEn: string | null;
+  descriptionAr: string | null;
   img: string | null;
   sourceLink: string | null;
   liveLink: string | null;
   skillsUsed: string[];
   finishDate: Date | null;
-  isLearning: boolean;
-  type: string;
+  isLearning: boolean | string;
+  type: ProjectType;
 }
+
+
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const t = useTranslations("projects/learning");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-
+  const local = useLocale()
 
   // GET projects :
   useEffect(() => {
@@ -111,7 +119,7 @@ export default function Projects() {
                       project?.img ||
                       "https://images.unsplash.com/photo-1682685794700-1f3e7b8c5d4e?auto=format&fit=crop&w=1170&q=80"
                     }
-                    alt={project?.title || "Project preview"}
+                    alt={local==="en"?project?.titleEn:project?.titleAr || "Project preview"}
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/5 to-transparent" />
                   <span className="absolute inset-s-4 bottom-4 rounded-full border border-white/20 bg-black/35 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">
@@ -126,7 +134,7 @@ export default function Projects() {
                   {/* Project title: */}
                   <div className="mb-3 flex items-start justify-between gap-3">
                     <h2 className="line-clamp-1 text-xl font-black text-zinc-950 dark:text-zinc-100">
-                      {project?.title}
+                      {local==="en"?project?.titleEn:project?.titleAr}
                     </h2>
 
                     <LuLayers3
@@ -137,7 +145,7 @@ export default function Projects() {
 
                   {/* Project description: */}
                   <p className="line-clamp-2 min-h-12 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-                    {project?.description}
+                    {local==="en"?project?.descriptionEn:project?.descriptionAr}
                   </p>
 
                   {/* Skills used: */}

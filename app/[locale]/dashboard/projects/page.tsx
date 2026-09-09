@@ -38,8 +38,10 @@ export default function Projects() {
    const [message, setMessage] = useState("");
    const t = useTranslations("admin.projects")
    const [form, setForm] = useState({
-      title: "",
-      description: "",
+      titleEn: "",
+      titleAr: "",
+      descriptionEn: "",
+      descriptionAr: "",
       img: "",
       sourceLink: "",
       liveLink: "",
@@ -110,7 +112,10 @@ export default function Projects() {
          setMessage("");
          await createProjectHandler({
          ...form,
-         title: form.title.trim(),
+         titleEn: form.titleEn.trim(),
+         titleAr: form.titleAr.trim(),
+         descriptionEn: form.descriptionEn.trim(),
+         descriptionAr: form.descriptionAr.trim(),
          skillsUsed: selectedSkills,
          finishDate: form.finishDate ? new Date(form.finishDate) : undefined,
          });
@@ -177,16 +182,29 @@ export default function Projects() {
                <div className="space-y-5">
 
 
-                  {/* Title field: */}
+                  {/* Title En field: */}
                   <label className="block">
                      <span className="mb-2 block text-sm font-bold">
-                        {t("fields.title.label")} <em className="text-emerald-600">*</em>
+                        {t("fields.titleEn.label")} <em className="text-emerald-600">*</em>
                      </span>
                      <input
                         required
-                        value={form.title}
-                        onChange={(event) => updateField("title", event.target.value)}
-                        placeholder={t("fields.title.placeholder")}
+                        value={form.titleEn}
+                        onChange={(event) => updateField("titleEn", event.target.value)}
+                        placeholder={t("fields.titleEn.placeholder")}
+                        className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/10 dark:border-zinc-700 dark:bg-zinc-950"
+                     />
+                  </label>
+                  {/* Title AR field: */}
+                  <label className="block">
+                     <span className="mb-2 block text-sm font-bold">
+                        {t("fields.titleAr.label")} <em className="text-emerald-600">*</em>
+                     </span>
+                     <input
+                        required
+                        value={form.titleAr}
+                        onChange={(event) => updateField("titleAr", event.target.value)}
+                        placeholder={t("fields.titleAr.placeholder")}
                         className="w-full rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/10 dark:border-zinc-700 dark:bg-zinc-950"
                      />
                   </label>
@@ -194,14 +212,29 @@ export default function Projects() {
                   {/* Description field: */}
                   <label className="block">
                      <span className="mb-2 block text-sm font-bold">
-                        {t("fields.description.label")}
+                        {t("fields.descriptionEn.label")}
                      </span>
                      <textarea
-                        value={form.description}
+                        value={form.descriptionEn}
                         onChange={(event) =>
-                        updateField("description", event.target.value)
+                        updateField("descriptionEn", event.target.value)
                         }
-                        placeholder={t("fields.description.placeholder")}
+                        placeholder={t("fields.descriptionEn.placeholder")}
+                        rows={5}
+                        className="w-full resize-none rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/10 dark:border-zinc-700 dark:bg-zinc-950"
+                     />
+                  </label>
+                  {/* Description field: */}
+                  <label className="block">
+                     <span className="mb-2 block text-sm font-bold">
+                        {t("fields.descriptionAr.label")}
+                     </span>
+                     <textarea
+                        value={form.descriptionAr}
+                        onChange={(event) =>
+                        updateField("descriptionAr", event.target.value)
+                        }
+                        placeholder={t("fields.descriptionAr.placeholder")}
                         rows={5}
                         className="w-full resize-none rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm outline-none transition focus:border-emerald-600 focus:ring-4 focus:ring-emerald-500/10 dark:border-zinc-700 dark:bg-zinc-950"
                      />

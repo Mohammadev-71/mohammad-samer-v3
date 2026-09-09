@@ -25,7 +25,7 @@ export default function ThemeSwitcher() {
    return (
 
       //Next Theme Button
-      <div onClick={() => setTheme(nextTheme)} className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10">
+      <div onClick={() => setTheme(nextTheme)} className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 hover:scale-110 transition-all duration-300 hover:bg-emerald-500/20">
          {theme === "dark" ? <FiSun size={25}/> : <MdDarkMode size={25}/>}
       </div>
    );

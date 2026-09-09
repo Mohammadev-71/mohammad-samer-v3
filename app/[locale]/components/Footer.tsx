@@ -39,7 +39,7 @@ export default function Footer() {
               href="https://www.linkedin.com/in/mohammad-samer-dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 flex justify-center items-center"
+              className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 hover:bg-emerald-500/20"
             >
               <FaLinkedinIn />
             </Link>
@@ -49,7 +49,7 @@ export default function Footer() {
               href={"https://github.com/Mohammadev-71"}
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 flex justify-center items-center"
+              className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 hover:bg-emerald-500/20"
             >
               <FiGithub />
             </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
               href={"https://wa.me/971562650112"}
               target="_blank"
               rel="noopener noreferrer"
-              className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 flex justify-center items-center"
+              className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 hover:bg-emerald-500/20"
             >
               <FaWhatsapp />
             </Link>
@@ -111,7 +111,7 @@ export default function Footer() {
               
               {/* Language Button */}
               <IntLink
-                className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 flex justify-center items-center"
+                className="cursor-pointer text-emerald-500 p-2 bg-emerald-500/10 rounded-lg w-10 h-10 flex justify-center items-center hover:scale-110 transition-all duration-300 hover:bg-emerald-500/20"
                 href={pathName}
                 locale={nextLocale}
               >

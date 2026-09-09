@@ -51,16 +51,18 @@ enum ProjectType {
 }
 
 model Project {
-  id              String @id @default(cuid())
-  title           String
-  description     String?
+  id              String      @id   @default(cuid())
+  titleEn         String      @map("title")
+  titleAr         String?
+  descriptionEn   String?     @map("description")
+  descriptionAr   String?
   img             String?
   sourceLink      String?
   liveLink        String?
   skillsUsed      String[]
   finishDate      DateTime?
   isLearning      Boolean 
-  type            ProjectType @default(VANILLA)
+  type            ProjectType     @default(VANILLA)
 }
 
 

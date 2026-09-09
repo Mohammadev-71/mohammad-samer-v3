@@ -19,8 +19,10 @@ export const addSkillValidationSchema = z.object({
 
 
 export const addProjectValidationSchema = z.object({
-   title:z.string().min(5,"TITLE_TOO_SMAL").max(40,"TITLE_TOO_LONG"),
-   description:z.string().min(10,"DESCRIPTION_TOO_SMAL").max(500,"DESCRIPTION_TOO_LONG"),
+   titleEn:z.string().min(5,"TITLE_TOO_SMAL").max(40,"TITLE_TOO_LONG"),
+   titleAr:z.string().min(5,"TITLE_TOO_SMAL").max(40,"TITLE_TOO_LONG"),
+   descriptionEn:z.string().min(10,"DESCRIPTION_TOO_SMAL").max(500,"DESCRIPTION_TOO_LONG"),
+   descriptionAr:z.string().min(10,"DESCRIPTION_TOO_SMAL").max(500,"DESCRIPTION_TOO_LONG"),
    img:z.string().min(1, "IMAGE_REQUIRED").url("INVALID_IMAGE_URL"),
    sourceLink:z.string().min(1, "IMAGE_REQUIRED").url("INVALID_IMAGE_URL").optional(),
    liveLink:z.string().min(1, "IMAGE_REQUIRED").url("INVALID_IMAGE_URL").optional(),

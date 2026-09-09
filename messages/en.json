@@ -151,17 +151,26 @@
       "projects": {
          "backBtn": "Back to dashboard",
          "header": "Workspace / Projects",
-         "title": "Add a new project",
+         "titleEn": "Add a new project in English",
+         "titleAr": "Add a new project in Arabic",
          "subtitle": "Capture the work clearly so visitors can understand what you built and how to explore it.",
          "formTitle": "Project details",
          "formSubtitle": "Start with the essentials.",
          "fields": {
-         "title": {
-            "label": "Project title",
+         "titleEn": {
+            "label": "Project title in English",
             "placeholder": "e.g. Portfolio dashboard"
          },
-         "description": {
-            "label": "Description",
+         "titleAr": {
+            "label": "Project title in Arabic",
+            "placeholder": "e.g. Portfolio dashboard"
+         },
+         "descriptionEn": {
+            "label": "Description in English",
+            "placeholder": "What did you build? What problem does it solve?"
+         },
+         "descriptionAr": {
+            "label": "Description in Arabic",
             "placeholder": "What did you build? What problem does it solve?"
          },
          "img": {

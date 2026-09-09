@@ -59,8 +59,10 @@ export async function getLearningProjectsHandler() {
 }
 
 export async function createProjectHandler({
-   title,
-   description,
+   titleEn,
+   titleAr,
+   descriptionEn,
+   descriptionAr,
    img,
    sourceLink,
    liveLink,
@@ -69,8 +71,10 @@ export async function createProjectHandler({
    type,
    isLearning
    }: {
-   title: string;
-   description?: string;
+   titleEn: string;
+   titleAr: string;
+   descriptionEn?: string;
+   descriptionAr?: string;
    img?: string;
    sourceLink?: string;
    liveLink?: string;
@@ -81,8 +85,10 @@ export async function createProjectHandler({
    }) {
    return prisma.project.create({
       data: {
-         title,
-         description: description || null,
+         titleEn: titleEn.trim(),
+         titleAr: titleAr || null,
+         descriptionEn: descriptionEn || null,
+         descriptionAr: descriptionAr || null,
          img: img || null,
          sourceLink: sourceLink || null,
          liveLink: liveLink || null,
