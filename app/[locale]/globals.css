@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+   --font-sans: 'Cairo', sans-serif;
+   --animate-wave: wave 3s linear infinite;
+   --animate-wave-slow: wave-slow 5s linear infinite;
+   --animate-marquee: marquee 25s linear infinite;
+   --animate-shimmer:shimmer 2s infinite ease-in-out;
+   --animate-popIn: popIn ease-in-out;
+
+
+   @keyframes marquee {
+      0% { transform: translateX(0%); }
+      100% { transform: translateX(-80%); }
+   }
+
+
+   @keyframes wave {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+   }
+
+   @keyframes wave-slow {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(-60%); }
+      100% { transform: translateX(0); }
+   }
+
+
+   @keyframes shimmer {
+      0% {
+         top: -100%;
+         left: -100%;
+      }
+      100% {
+         top: 100%;
+         left: 100%;
+      }
+   }
+
+   @keyframes popIn {
+      0%{
+         opacity: 0;
+         transform: scale(1.1);
+      }
+      100%{
+         opacity: 1;
+         transform: scale(1);
+      }
+   }
+
+}
+

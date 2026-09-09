@@ -1,0 +1,206 @@
+{
+   "home": {
+      "name": "I'm Mohammad Samer",
+      "title": "Full-Stack web developer",
+      "subtitle": "Writing code that solves problems, and building designs that tell a story.",
+      "buttons": {
+         "viewCV": "View CV",
+         "downloadCV": "Download CV",
+         "projects": "My Projects"
+      },
+      "about": {
+         "commit": "// ABOUT ME",
+         "title": "For me, code is more than just work — it’s how I turn ideas into something real.",
+         "subtitle": "I didn’t plan on becoming a developer. I discovered programming almost by accident, started out of curiosity, and somewhere along the way, that curiosity turned into a passion. \n Today, I’m a Full-Stack Web Developer who enjoys building things from the ground up, solving problems, and understanding how everything works behind the screen.\nI’m always experimenting, learning, and looking for better ways to build. Because for me, the best part of coding isn’t just finishing a project — it’s everything I learn while creating it."
+      }
+   },
+   "navbar": {
+      "title": "Mohammad Samer",
+      "links": {
+         "home": "Home",
+         "skills": "Skills",
+         "projects": "Projects",
+         "projects/learning": "For Learners",
+         "contact": "Contact Me"
+      }
+   },
+   "footer": {
+      "name": "Mohammad Samer",
+      "role": "Full-Stack Web Developer",
+      "skills": "Skills",
+      "quickLinks": "Quick Links",
+      "preference": "Preference",
+      "projects": "Projects",
+      "home": "Home",
+      "learning": "For Learners",
+      "contact": "Contact Me",
+      "rights": "© 2026 Mohammad Samer. All right reserved."
+   },
+
+   "skills": {
+      "commit": "// Tech Stack",
+      "title": "My Tech Arsenal",
+      "subtitle": "A carefully curated stack of modern web technologies, libraries, and DevOps tooling.Constantly updating to stay on the bleeding edge",
+      "mainSkills": {
+         "front": "Frontend Arch",
+         "back": "Backend APIs",
+         "db": "Database & ORM",
+         "f-s": "Full-Stack Integration",
+         "security": "System & Security"
+      },
+      "FRONTEND": "Frontend Engineering",
+      "BACKEND": "Backend Systems",
+      "DATABASE": "Database Architecture",
+      "DEVOPS": "DevOps & Cloud",
+      "TOOLS": "Productivity Tools"
+   },
+
+   "projects": {
+      "commit": "// Projects",
+      "title": "My Projects",
+      "subtitle": "A curated collection of work, experiments, and shipped ideas.",
+      "projectLength": "Project"
+   },
+
+   "projects/learning": {
+      "commit": "// For Learners",
+      "title": "This section was designed for you.",
+      "subtitle": "This is the building blocks of my journey. Simple projects, experiments, and code shared for anyone looking to learn.",
+      "projectLength": "Project"
+   },
+
+   "contact": {
+      "commit": "// Contact Me",
+      "title": "Let's build something meaningful.",
+      "subtitle": "Have an idea, a project, or a question? Send a message and I will get back to you as soon as possible.",
+      "cardTitle": "Let’s start a conversation.",
+      "cardSubtitle": "I am always open to discussing new projects, creative ideas, or opportunities to be part of your next challenge.",
+      "location": "Available remotely",
+      "availability": "Usually replies in 24h",
+      "formEyebrow": "Send a message",
+      "formTitle": "Tell me about your idea",
+      "fields": {
+         "name": "Your name",
+         "namePlaceholder": "Mohammad Samer",
+         "email": "Email address",
+         "emailPlaceholder": "you@example.com",
+         "subject": "Subject",
+         "subjectPlaceholder": "How can I help?",
+         "message": "Your message",
+         "messagePlaceholder": "Tell me a little about your project..."
+      },
+      "send": "Open email draft",
+      "sendSuccessfully":"Thank you for reaching out. Your message has been sent",
+      "fieldSending":"Failed to send message. Please try again later.",
+      "loading":"Sending..."
+   },
+
+   "admin": {
+      "login": {
+         "title": "Welcome Back Admin!",
+         "fields": {
+         "email": "Email",
+         "password": "Password",
+         "name": "Name"
+         },
+         "submit": "SignIn"
+      },
+      "dashboard": {
+         "loading": "Preparing your dashboard...",
+         "fallbackName": "Mohammad",
+         "workspace": "Workspace",
+         "viewSite": "View website",
+         "eyebrow": "Dashboard",
+         "greeting": "Good morning, {name}",
+         "intro": "Everything you need to manage your digital presence and keep your projects moving, in one place.",
+         "newProject": "New project",
+         "nav": {
+         "overview": "Overview",
+         "skills": "Skills",
+         "projects": "Projects"
+         },
+         "stats": {
+         "projects": "Total projects",
+         "skills": "Active skills",
+         "uptime": "Platform health",
+         "stable": "Stable"
+         },
+         "activity": {
+         "title": "Recent activity",
+         "subtitle": "A quick look at what is happening in your workspace",
+         "more": "View more",
+         "skillTitle": "Skills library updated",
+         "skillDetail": "New technologies were added to your profile.",
+         "securityTitle": "Security is looking good",
+         "securityDetail": "No unusual sign-ins or alerts were detected.",
+         "profileTitle": "Profile is ready to share",
+         "profileDetail": "Your essential information is complete and up to date.",
+         "today": "Today",
+         "yesterday": "Yesterday",
+         "lastWeek": "Last week"
+         },
+         "health": {
+         "label": "Workspace health",
+         "title": "You are on the right track.",
+         "description": "Your technical profile is organized and ready to tell your story to clients and future opportunities.",
+         "ready": "Ready to work"
+         },
+         "updated": "Updated 5 minutes ago",
+         "secure": "Secure, encrypted session"
+      },
+      "projects": {
+         "backBtn": "Back to dashboard",
+         "header": "Workspace / Projects",
+         "title": "Add a new project",
+         "subtitle": "Capture the work clearly so visitors can understand what you built and how to explore it.",
+         "formTitle": "Project details",
+         "formSubtitle": "Start with the essentials.",
+         "fields": {
+         "title": {
+            "label": "Project title",
+            "placeholder": "e.g. Portfolio dashboard"
+         },
+         "description": {
+            "label": "Description",
+            "placeholder": "What did you build? What problem does it solve?"
+         },
+         "img": {
+            "label": "Cover image URL",
+            "placeholder": "https://..."
+         },
+         "liveLink": {
+            "label": "Live URL",
+            "placeholder": "https://my-project.com"
+         },
+         "sourceLink": {
+            "label": "Source URL",
+            "placeholder": "https://github.com/..."
+         },
+         "type": {
+            "label": "Project type"
+         },
+         "finishDate": {
+            "label": "Finish date"
+         },
+         "isLearning": {
+            "label": "Is Learned Project?"
+         }
+         },
+         "settings": {
+         "title": "Project settings"
+         }
+      },
+      "skills": {
+         "table": {
+         "skills": "Skills",
+         "type": "Type",
+         "delete": "Delete"
+         },
+         "form": {
+         "title": "Add New Skill",
+         "name": "Skill Name",
+         "type": "Choose Type"
+         }
+      }
+   }
+}
