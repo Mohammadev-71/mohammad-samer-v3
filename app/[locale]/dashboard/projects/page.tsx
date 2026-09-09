@@ -73,7 +73,7 @@ export default function Projects() {
    }
 
 
-   const updateField = (field: keyof typeof form, value: string) => {
+   const updateField = (field: keyof typeof form, value: string | boolean) => {
       setForm((current) => ({ ...current, [field]: value }));
    };
 
@@ -357,7 +357,7 @@ export default function Projects() {
                      type="checkbox"
                      checked={form.isLearning}
                      onChange={(event) =>
-                     updateField("isLearning",String(event.target.checked))
+                     updateField("isLearning",event.target.checked)
                      }
                      className="w-4 h-4 rounded border border-zinc-200 bg-zinc-50 text-emerald-600 focus:ring-emerald-500 dark:border-zinc-700 dark:bg-zinc-950"
                   />
