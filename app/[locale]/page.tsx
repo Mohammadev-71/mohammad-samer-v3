@@ -74,7 +74,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start w-full 2xl:w-9/12 h-auto gap-10 md:gap-20">
           <Image
             loading="eager"
-            className="shadow-lg rounded-xl shadow-emerald-500 border border-emerald-500 animate-popIn [animation-duration:2s]"
+            className="shadow-lg rounded-xl shadow-emerald-500 border border-emerald-500 animate-popIn [animation-duration:2s] hover:scale-105 transition-all duration-300 hover:shadow-emerald-700"
             width={500}
             height={500}
             src={"/aboutImg4.jpg"}

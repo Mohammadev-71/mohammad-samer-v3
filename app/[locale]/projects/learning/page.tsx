@@ -186,7 +186,7 @@ export default function Projects() {
                           href={project.sourceLink}
                           target="_blank"
                           rel="noreferrer"
-                          aria-label={`View ${project.title} source`}
+                          aria-label={`View ${local==="en"?project?.titleEn:project?.titleAr} source`}
                         >
                           <LuGithub size={17} />
                         </a>
@@ -197,7 +197,7 @@ export default function Projects() {
                           href={project.liveLink}
                           target="_blank"
                           rel="noreferrer"
-                          aria-label={`Open ${project.title} live site`}
+                          aria-label={`Open ${local==="en"?project?.titleEn:project?.titleAr} live site`}
                         >
                           <LuExternalLink size={17} />
                         </a>
