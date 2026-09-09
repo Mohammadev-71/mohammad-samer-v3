@@ -24,7 +24,7 @@ export default function Navbar() {
    
    return (
       <div
-         className={`bg-white dark:bg-zinc-950  ${isOpen ? "h-full md:h-26" : " h-20 md:h-26"} w-full overflow-hidden flex justify-between items-start fixed z-10 pt-6 transition-all duration-400 border-b border-emerald-600 dark:border-emerald-700 p-4 md:p-10`}
+         className={`bg-white dark:bg-zinc-950  ${isOpen ? "h-full md:h-20" : " h-20 md:h-20"} w-full overflow-hidden flex justify-between items-start  md:items-center fixed z-10 pt-6 transition-all duration-400 border-b border-emerald-600 dark:border-emerald-700 px-4`}
       >
          {/* content container: */}
          <div className="flex flex-col md:flex-row gap-8 w-full justify-between items-start">
@@ -48,7 +48,7 @@ export default function Navbar() {
 
             {/* Links List: */}
             <ul
-               className={`${isOpen ? "opacity-100" : "opacity-0 md:opacity-100"} transition-all duration-400 flex flex-col md:flex-row gap-4 md:gap-10 pb-4 w-full md:w-auto`}
+               className={`${isOpen ? "opacity-100" : "opacity-0 md:opacity-100"} transition-all duration-400 flex flex-col md:flex-row  pb-4 w-full md:w-auto`}
             >
 
                {/* Home link */}
@@ -59,7 +59,7 @@ export default function Navbar() {
                   href={"/"}
                >
                   <li
-                  className={`text-xl ${pathName === "/" ? "bg-emerald-500/10 rounded-lg shadow-inner shadow-emerald-700" : "bg-transparent"}  text-emerald-800 dark:text-emerald-500 hover:text-emerald-700 cursor-pointer w-full p-4 md:p-2  transition-all duration-200 flex min-w-40 justify-start md:justify-center items-center`}
+                  className={`text-xl ${pathName === "/" ? "bg-emerald-500/10 rounded-lg shadow-inner shadow-emerald-700" : "bg-transparent"}  text-emerald-800 dark:text-emerald-500 hover:text-emerald-700 cursor-pointer w-full p-4 md:p-2  transition-all duration-200 flex min-w-40 justify-start md:justify-center items-center `}
                   >
                   {t("links.home")}
                   </li>
