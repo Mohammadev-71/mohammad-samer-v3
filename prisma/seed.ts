@@ -1,17 +1,16 @@
 import {prisma} from '../src/lib/prisma'
-
+import { auth } from '@/src/lib/auth'
 
 async function main() {
-   await prisma.user.upsert({
-      where: { email: 'mohammadev71@gmail.com' },
-      update: {},
-      create: {
+   const res = await auth.api.signUpEmail({
+      body: {
          email: 'mohammadev71@gmail.com',
+         password: "Mohammad1@",
          name: 'Mohammad',
       },
    })
 
-   console.log('Seed data created successfully')
+   console.log('Seed user created successfully via Better Auth API:', res)
 }
 
 
