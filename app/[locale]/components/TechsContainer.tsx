@@ -41,14 +41,29 @@ export default async function TechsContainer(){
                
                   <h1 className="text-emerald-600 flex justify-center items-center gap-2 text-xl "><span className="w-10 h-10 flex justify-center items-center bg-emerald-800/20 rounded-lg text-emerald-500 text-xl">{type[0]==="FRONTEND"?<LuLayoutDashboard />:type[0]==="BACKEND"?<FaServer/>:type[0]==="DATABASE"?<IoServerOutline/>:type[0]==="DEVOPS"?<GoCommandPalette/>:type[0]==="TOOLS"?<LuWrench/>:""}</span> {t(`${type[0]}`)}</h1>
 
-                  <div className="w-full h-full mt-6 flex flex-wrap"> 
+                  <div className="mt-6 grid grid-cols-3 min-w-full px-4 py-4 gap-4">
+                  {type[1]?.map((skill, index) => {
                      
-                     {
-                        type[1]?.map((skill)=>(
-                           <div className="relative bg-emerald-700 dark:bg-zinc-700/50 m-4 py-2 px-8 rounded-xl shadow-inner shadow-gray-300 dark:shadow-gray-700 text-white dark:text-white text-lg" key={skill?.id}>{skill?.skill}</div>
-                        ))
-                     }
-                     
+                     const isEven = index % 4 === 1 || index % 4 === 2;
+                     return (
+                        <div
+                        key={skill.id}
+                        className={`
+                           relative
+                           flex
+                           items-center
+                           rounded-xl px-${isEven?1:8 } py-3
+                           min-w-${isEven?'30':'10'}
+                           bg-emerald-700 dark:bg-zinc-700/50
+                           text-lg text-white w-full
+                           shadow-inner shadow-gray-300 dark:shadow-gray-700 justify-center
+                           ${`col-span-${isEven?2:1}`}
+                        `}
+                        >
+                        {skill.skill}
+                        </div>
+                     );
+                  })}
                   </div>
                </div>
             </Suspense>
