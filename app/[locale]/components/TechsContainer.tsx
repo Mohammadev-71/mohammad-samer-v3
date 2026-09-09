@@ -52,13 +52,10 @@ export default async function TechsContainer(){
                            relative
                            flex
                            items-center
-                           rounded-xl px-${isEven?1:8 } py-3
-                           min-w-${isEven?'30':'10'}
+                           rounded-xl py-3
                            bg-emerald-700 dark:bg-zinc-700/50
                            text-lg text-white w-full
-                           shadow-inner shadow-gray-300 dark:shadow-gray-700 justify-center
-                           ${`col-span-${isEven?2:1}`}
-                        `}
+                           shadow-inner shadow-gray-300 dark:shadow-gray-700 justify-center ${isEven? "col-span-2 min-w-[30px] px-1": "col-span-1 min-w-[10px] px-8"}`}
                         >
                         {skill.skill}
                         </div>
