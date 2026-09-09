@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "docker start my-local-postgres && next dev",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "gen_prisma":"npx prisma db push && npx prisma generate && npx prisma db seed",
