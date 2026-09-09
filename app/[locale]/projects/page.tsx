@@ -23,7 +23,7 @@ interface Project {
   liveLink: string | null;
   skillsUsed: string[];
   finishDate: Date | null;
-  isLearning: boolean;
+  isLearning: boolean | string;
   type: string;
 }
 
