@@ -60,7 +60,7 @@ export default function Projects() {
       {/* Background light: */}
       <div className="pointer-events-none absolute inset-x-0 top-20 -z-0 h-72 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.14),transparent_68%)] dark:bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.12),transparent_68%)]" />
 
-      <div className="mx-auto max-w-7xl">
+      <div>
         {/* Title container: */}
         <div className="mb-8 flex items-end justify-between gap-4  animate-popIn [animation-duration:0.5s]">
           <div className="w-full flex flex-col justify-center items-center gap-4">
