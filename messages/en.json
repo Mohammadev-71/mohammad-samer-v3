@@ -20,7 +20,7 @@
          "home": "Home",
          "skills": "Skills",
          "projects": "Projects",
-         "projects/learning": "For Learners",
+         "projects/archive": "Archive",
          "contact": "Contact Me"
       }
    },
@@ -62,10 +62,10 @@
       "projectLength": "Project"
    },
 
-   "projects/learning": {
-      "comment": "// For Learners",
-      "title": "This section was designed for you.",
-      "subtitle": "This is the building blocks of my journey. Simple projects, experiments, and code shared for anyone looking to learn.",
+   "projects/archive": {
+      "comment": "// My Archive",
+      "title": "Every project holds a piece of my journey",
+      "subtitle": "A collection of early projects and experiments that shaped my skills and helped me grow into the developer I am today.",
       "projectLength": "Project"
    },
 

@@ -89,7 +89,7 @@ export default function Projects() {
             projects.map((project) => (
               <article
                 key={project?.id}
-                className="group overflow-hidden border border-emerald-900/10 bg-white shadow-sm shadow-emerald-700 transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-emerald-100/10 dark:bg-zinc-900/80 rounded-xl max-w-[350px] h-auto animate-popIn [animation-duration:0.5s]"
+                className="group overflow-hidden border border-emerald-900/10 bg-white shadow-sm shadow-emerald-700 transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-emerald-100/10 dark:bg-zinc-900/80 rounded-xl max-w-[350px] min-w-[350px] max-h-[500px] min-h-[500px] animate-popIn [animation-duration:0.5s]"
               >
                 {/* Img container: */}
                 <IntLink href={`/project/${project?.id}`}>

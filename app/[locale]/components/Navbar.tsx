@@ -101,12 +101,12 @@ export default function Navbar() {
                   onClick={() => {
                   setIsOpen(false);
                   }}
-                  href={"/projects/learning"}
+                  href={"/projects/archive"}
                >
                   <li
                   className={`text-xl ${pathName === "/projects/learning" ? "bg-emerald-500/10 rounded-lg shadow-inner shadow-emerald-700" : "bg-transparent"}  text-emerald-800 dark:text-emerald-500 hover:text-emerald-700 cursor-pointer w-full p-4 md:p-2  transition-all duration-200 flex min-w-30 justify-start md:justify-center items-center`}
                   >
-                  {t("links.projects/learning")}
+                  {t("links.projects/archive")}
                   </li>
                </IntLink>
 

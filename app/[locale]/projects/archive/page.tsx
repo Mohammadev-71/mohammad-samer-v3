@@ -38,7 +38,7 @@ interface Project {
 
 export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
-  const t = useTranslations("projects/learning");
+  const t = useTranslations("projects/archive");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const local = useLocale()
 
@@ -65,7 +65,7 @@ export default function Projects() {
   return (
 
     // Main container:
-    <div className="min-h-screen w-full bg-white px-4 pb-16 pt-32 dark:bg-black sm:px-6 lg:px-10">
+    <div className="min-h-screen w-full bg-white px-4 pb-16 pt-32 dark:bg-black sm:px-6 lg:px-10 flex flex-col items-center justify-center">
 
       {/* Background light: */}
       <div className="pointer-events-none absolute inset-x-0 top-20 -z-0 h-72 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.14),transparent_68%)] dark:bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.12),transparent_68%)]" />
@@ -79,7 +79,7 @@ export default function Projects() {
           <div className="w-full flex flex-col justify-center items-center gap-4">
 
             {/* Comment box" */}
-            <CommentBox comment={t("co")} />
+            <CommentBox comment={t("comment")} />
 
             {/* Page title  */}
             <h1 className="text-center text-3xl md:text-4xl font-bold  text-emerald-700 dark:text-emerald-500">
@@ -102,13 +102,13 @@ export default function Projects() {
 
 
         {/* Projects container: */}
-        <div className="relative flex flex-warp justify-center items-center min-h-auto">
+        <div className="relative flex flex-warp justify-center items-center gap-10">
           
           {!isLoading ? (
             projects.map((project) => (
               <article
                 key={project?.id}
-                className="group overflow-hidden border border-emerald-900/10 bg-white shadow-sm shadow-emerald-700 transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-emerald-100/10 dark:bg-zinc-900/80 rounded-xl max-w-[350px] h-auto animate-popIn [animation-duration:0.5s]"
+                className="group overflow-hidden border border-emerald-900/10 bg-white shadow-sm shadow-emerald-700 transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-emerald-100/10 dark:bg-zinc-900/80 rounded-xl max-w-[350px] min-w-[350px] max-h-[500px] min-h-[500px] animate-popIn [animation-duration:0.5s]"
               >
 
                 {/* Img container: */}
