@@ -24,8 +24,8 @@ export const addProjectValidationSchema = z.object({
    descriptionEn:z.string().min(10,"DESCRIPTION_TOO_SMAL").max(1500,"DESCRIPTION_TOO_LONG"),
    descriptionAr:z.string().min(10,"DESCRIPTION_TOO_SMAL").max(1500,"DESCRIPTION_TOO_LONG"),
    img:z.string().min(1, "IMAGE_REQUIRED").url("INVALID_IMAGE_URL"),
-   sourceLink:z.string().url("INVALID_IMAGE_URL").optional(),
-   liveLink:z.string().url("INVALID_IMAGE_URL").optional(),
+   sourceLink: z.string().url("INVALID_URL").optional().nullable(),
+   liveLink:z.string().url("INVALID_URL").optional().nullable(),
    skillsUsed:z.array(z.string()).min(1,"NO_SKILL_USED"),
    finishDate:z.string("FINISH_DATE_REQUIRED"),
    type:z.enum(['VANILLA','FRONTEND','BACKEND','FULLSTACK'])
