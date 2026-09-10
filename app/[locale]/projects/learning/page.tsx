@@ -79,7 +79,7 @@ export default function Projects() {
           <div className="w-full flex flex-col justify-center items-center gap-4">
 
             {/* Comment box" */}
-            <CommentBox comment={t("commit")} />
+            <CommentBox comment={t("co")} />
 
             {/* Page title  */}
             <h1 className="text-center text-3xl md:text-4xl font-bold  text-emerald-700 dark:text-emerald-500">

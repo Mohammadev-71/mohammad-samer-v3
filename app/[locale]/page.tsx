@@ -58,8 +58,8 @@ export default function Home() {
       {/* About me Section */}
 
       <section className="flex flex-col justify-center items-center bg-white font-sans dark:bg-black px-4 gap-10 pb-30 min-w-screen">
-        {/* Commit box*/}
-        <CommentBox comment={t("about.commit")} />
+        {/* comment box*/}
+        <CommentBox comment={t("about.comment")} />
 
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start w-full 2xl:w-9/12 h-auto gap-10 md:gap-20">
           <Image
