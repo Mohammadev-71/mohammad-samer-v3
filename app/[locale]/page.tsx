@@ -22,17 +22,17 @@ export default function Home() {
           <h1 className="text-gray-800 dark:text-white text-3xl md:text-5xl text-center font-bold mt-8">
             {t("name")}
           </h1>
-          <h1 className="text-emerald-800 dark:text-emerald-500 text-3xl md:text-5xl text-center font-bold">
+          <h1 className="text-emerald-800 dark:text-emerald-500 text-2xl md:text-5xl text-center font-bold">
             {t("title")}
           </h1>
-          <h1 className="text-gray-700 dark:text-gray-400 text-xl md:text-2xl text-center mt-4 max-w-full md:max-w-9/12">
+          <h1 className="text-gray-700 dark:text-gray-400 text-lg md:text-2xl text-center mt-4 max-w-full md:max-w-9/12">
             {t("subtitle")}
           </h1>
 
           {/* action buttons: */}
           <div className="flex justify-center flex-wrap items-center gap-8 mt-8">
             <a
-              className="p-4 min-w-30 text-center border border-gray-700 rounded-lg bg-emerald-600 dark:bg-emerald-500/80 text-gray-100 dark:text-gray-800 text-lg font-bold"
+              className="px-4 py-3 min-w-30 text-center border border-gray-700 rounded-lg bg-emerald-600 dark:bg-emerald-500/80 text-gray-100 dark:text-gray-800 text-lg font-bold"
               href="/mohammad-cv.pdf"
               target="_blank "
               rel="noopener noreferrer"
@@ -41,17 +41,7 @@ export default function Home() {
             </a>
 
             <a
-              className="p-4 min-w-30 text-center border border-gray-700 rounded-lg bg-emerald-600 dark:bg-emerald-500/80 text-gray-100 dark:text-gray-800 text-lg font-bold"
-              href="/mohammad-cv.pdf"
-              target="_blank "
-              rel="noopener noreferrer"
-              download={true}
-            >
-              {t("buttons.downloadCV")}
-            </a>
-
-            <a
-              className="p-4 min-w-30 text-center border border-emerald-600 dark:border-gray-300 rounded-lg  text-emerald-700 dark:text-gray-300 text-lg font-bold"
+              className="px-4 py-3 min-w-30 text-center border border-emerald-600 dark:border-gray-300 rounded-lg  text-emerald-700 dark:text-gray-300 text-lg font-bold"
               href="/mohammad-cv.pdf"
               target="_blank "
               rel="noopener noreferrer"
@@ -69,7 +59,7 @@ export default function Home() {
 
       <section className="flex flex-col justify-center items-center bg-white font-sans dark:bg-black px-4 gap-10 pb-30 min-w-screen">
         {/* Commit box*/}
-        <CommentBox commit={t("about.commit")} />
+        <CommentBox comment={t("about.commit")} />
 
         <div className="flex flex-col lg:flex-row justify-center items-center lg:items-start w-full 2xl:w-9/12 h-auto gap-10 md:gap-20">
           <Image

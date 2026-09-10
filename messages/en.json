@@ -211,5 +211,14 @@
          "type": "Choose Type"
          }
       }
+   },
+   "projectDetails":{
+      "backBtn": "Back to projects",
+      "header": "Project details",
+      "learning": "Learning project",
+      "project": "Project",
+      "inProgress": "In progress",
+      "sourceCode": "Source Code",
+      "liveDemo": "Live Demo"
    }
 }

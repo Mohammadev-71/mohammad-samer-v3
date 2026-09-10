@@ -211,5 +211,16 @@
          "type": "اختر النوع"
          }
       }
+   },
+
+   
+   "projectDetails":{
+      "backBtn": "الرجوع الى المشاريع",
+      "header": "تفاصيل المشروع",
+      "learning": "مشروع تعلمي",
+      "project": "مشروع",
+      "inProgress": "قيد التنفيذ",
+      "sourceCode": "كود المشروع",
+      "liveDemo": "العرض المباشر"
    }
 }

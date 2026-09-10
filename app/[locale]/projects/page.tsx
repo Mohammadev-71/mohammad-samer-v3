@@ -9,13 +9,12 @@ import {
   LuGithub,
   LuLayers3,
 } from "react-icons/lu";
-
+import { Link as IntLink } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import CommentBox from "../components/commentBox";
 import ProjectCardLoading from "../components/loadingsComponents/ProjectCardLoading";
 import { useLocale } from "next-intl";
 import { ProjectType } from "@/src/generated/prisma/enums";
-
 
 interface Project {
   id: string;
@@ -36,8 +35,7 @@ export default function Projects() {
   const [projects, setProjects] = useState<Project[]>([]);
   const t = useTranslations("projects");
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const local = useLocale()
-
+  const local = useLocale();
 
   // GET projects:
   useEffect(() => {
@@ -66,10 +64,9 @@ export default function Projects() {
         {/* Title container: */}
         <div className="mb-8 flex items-end justify-between gap-4  animate-popIn [animation-duration:0.5s]">
           <div className="w-full flex flex-col justify-center items-center gap-4">
-
             {/* comment box: */}
 
-            <CommentBox commit={t("commit")} />
+            <CommentBox comment={t("commit")} />
 
             {/* Page title */}
             <h1 className="text-center text-3xl md:text-4xl font-bold  text-emerald-700 dark:text-emerald-500">
@@ -86,43 +83,44 @@ export default function Projects() {
           </span>
         </div>
 
-
         {/* Projects container: */}
-        <div className="flex flex-warp justify-center items-center">
+        <div className="relative flex flex-warp justify-center items-center min-h-auto">
           {!isLoading ? (
             projects.map((project) => (
-
-              // card container:
               <article
                 key={project?.id}
-                className="group overflow-hidden border border-emerald-900/10 bg-white shadow-sm shadow-emerald-700 transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-emerald-100/10 dark:bg-zinc-900/80 rounded-xl  animate-popIn [animation-duration:0.5s]"
+                className="group overflow-hidden border border-emerald-900/10 bg-white shadow-sm shadow-emerald-700 transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-emerald-100/10 dark:bg-zinc-900/80 rounded-xl max-w-[350px] h-auto animate-popIn [animation-duration:0.5s]"
               >
+                {/* Img container: */}
+                <IntLink href={`/project/${project?.id}`}>
+                  <div className="relative aspect-16/10 overflow-hidden bg-emerald-900/10">
+                    <Image
+                      className="object-cover transition duration-500 group-hover:scale-105 animate-popIn [animation-duration:1s]"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      src={
+                        project?.img ||
+                        "https://images.unsplash.com/photo-1682685794700-1f3e7b8c5d4e?auto=format&fit=crop&w=1170&q=80"
+                      }
+                      alt={
+                        local === "en"
+                          ? project?.titleEn
+                          : project?.titleAr || "Project preview"
+                      }
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/5 to-transparent" />
+                    <span className="absolute inset-s-4 bottom-4 rounded-full border border-white/20 bg-black/35 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">
+                      {project?.type || "Project"}
+                    </span>
+                  </div>
+                </IntLink>
 
-                {/* img container: */}
-                <div className="relative aspect-16/10 overflow-hidden bg-emerald-900/10">
-                  <Image
-                    className="object-cover transition duration-500 group-hover:scale-105  animate-popIn [animation-duration:1s]"
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                    src={
-                      project?.img ||
-                      "https://images.unsplash.com/photo-1682685794700-1f3e7b8c5d4e?auto=format&fit=crop&w=1170&q=80"
-                    }
-                    alt={local==="en"?project?.titleEn:project?.titleAr || "Project preview"}
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/5 to-transparent" />
-                  <span className="absolute inset-s-4 bottom-4 rounded-full border border-white/20 bg-black/35 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">
-                    {project?.type || "Project"}
-                  </span>
-                </div>
-
-                  {/* content container: */}
+                {/* Content container: */}
                 <div className="p-5">
-
-                  {/* Project title */}
+                  {/* Project title: */}
                   <div className="mb-3 flex items-start justify-between gap-3">
                     <h2 className="line-clamp-1 text-xl font-black text-zinc-950 dark:text-zinc-100">
-                      {local==="en"?project?.titleEn:project?.titleAr}
+                      {local === "en" ? project?.titleEn : project?.titleAr}
                     </h2>
 
                     <LuLayers3
@@ -133,7 +131,9 @@ export default function Projects() {
 
                   {/* Project description: */}
                   <p className="line-clamp-2 min-h-12 text-sm leading-6 text-zinc-500 dark:text-zinc-400">
-                    {local==="en"?project?.titleEn:project?.titleAr}
+                    {local === "en"
+                      ? project?.descriptionEn
+                      : project?.descriptionAr}
                   </p>
 
                   {/* Skills used: */}
@@ -155,12 +155,9 @@ export default function Projects() {
                     </div>
                   )}
 
-                  
-
                   {/* Date and links container: */}
                   <div className="mt-5 flex items-center justify-between border-t border-zinc-100 pt-4 dark:border-zinc-800">
-
-                    {/* Date: */}
+                    {/* Date */}
                     <span className="flex items-center gap-1.5 text-xs text-zinc-400">
                       <LuCalendarDays size={14} />
                       {project?.finishDate
@@ -168,7 +165,7 @@ export default function Projects() {
                         : "In progress"}
                     </span>
 
-                    {/* Projects links */}
+                    {/* Project links: */}
                     <div className="flex items-center gap-1">
                       {project?.sourceLink && (
                         <a
@@ -176,7 +173,7 @@ export default function Projects() {
                           href={project.sourceLink}
                           target="_blank"
                           rel="noreferrer"
-                          aria-label={`View ${local==="en"?project?.titleEn:project?.titleAr} source`}
+                          aria-label={`View ${local === "en" ? project?.titleEn : project?.titleAr} source`}
                         >
                           <LuGithub size={17} />
                         </a>
@@ -187,7 +184,7 @@ export default function Projects() {
                           href={project.liveLink}
                           target="_blank"
                           rel="noreferrer"
-                          aria-label={`Open ${local==="en"?project?.titleEn:project?.titleAr} live site`}
+                          aria-label={`Open ${local === "en" ? project?.titleEn : project?.titleAr} live site`}
                         >
                           <LuExternalLink size={17} />
                         </a>

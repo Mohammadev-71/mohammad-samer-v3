@@ -10,7 +10,7 @@ import {
   LuGithub,
   LuLayers3,
 } from "react-icons/lu";
-
+import { Link as IntLink } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import CommentBox from "../../components/commentBox";
 import ProjectCardLoading from "../../components/loadingsComponents/ProjectCardLoading";
@@ -41,6 +41,7 @@ export default function Projects() {
   const t = useTranslations("projects/learning");
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const local = useLocale()
+
 
   // GET projects :
   useEffect(() => {
@@ -78,7 +79,7 @@ export default function Projects() {
           <div className="w-full flex flex-col justify-center items-center gap-4">
 
             {/* Comment box" */}
-            <CommentBox commit={t("commit")} />
+            <CommentBox comment={t("commit")} />
 
             {/* Page title  */}
             <h1 className="text-center text-3xl md:text-4xl font-bold  text-emerald-700 dark:text-emerald-500">
@@ -101,31 +102,36 @@ export default function Projects() {
 
 
         {/* Projects container: */}
-        <div className="flex flex-warp justify-center items-center">
+        <div className="relative flex flex-warp justify-center items-center min-h-auto">
+          
           {!isLoading ? (
             projects.map((project) => (
               <article
                 key={project?.id}
-                className="group overflow-hidden border border-emerald-900/10 bg-white shadow-sm shadow-emerald-700 transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-emerald-100/10 dark:bg-zinc-900/80 rounded-xl max-w-[350px] max-h-[450px] animate-popIn [animation-duration:0.5s]"
+                className="group overflow-hidden border border-emerald-900/10 bg-white shadow-sm shadow-emerald-700 transition duration-300 hover:-translate-y-1 hover:shadow-lg dark:border-emerald-100/10 dark:bg-zinc-900/80 rounded-xl max-w-[350px] h-auto animate-popIn [animation-duration:0.5s]"
               >
 
                 {/* Img container: */}
-                <div className="relative aspect-16/10 overflow-hidden bg-emerald-900/10">
-                  <Image
-                    className="object-cover transition duration-500 group-hover:scale-105 animate-popIn [animation-duration:1s]"
-                    fill
-                    sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                    src={
-                      project?.img ||
-                      "https://images.unsplash.com/photo-1682685794700-1f3e7b8c5d4e?auto=format&fit=crop&w=1170&q=80"
-                    }
-                    alt={local==="en"?project?.titleEn:project?.titleAr || "Project preview"}
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/5 to-transparent" />
-                  <span className="absolute inset-s-4 bottom-4 rounded-full border border-white/20 bg-black/35 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">
-                    {project?.type || "Project"}
-                  </span>
-                </div>
+                <IntLink href={`/project/${project?.id}`}>
+                    <div className="relative aspect-16/10 overflow-hidden bg-emerald-900/10">
+                    <Image 
+                      
+                      className="object-cover transition duration-500 group-hover:scale-105 animate-popIn [animation-duration:1s]"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                      src={
+                        project?.img ||
+                        "https://images.unsplash.com/photo-1682685794700-1f3e7b8c5d4e?auto=format&fit=crop&w=1170&q=80"
+                      }
+                      alt={local==="en"?project?.titleEn:project?.titleAr || "Project preview"}
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/65 via-black/5 to-transparent" />
+                    <span className="absolute inset-s-4 bottom-4 rounded-full border border-white/20 bg-black/35 px-3 py-1 text-xs font-bold text-white backdrop-blur-md">
+                      {project?.type || "Project"}
+                    </span>
+                  </div>
+                </IntLink>
+                
 
 
                 {/* Content container: */}

@@ -14,11 +14,11 @@ export default function TypeEngine(){
          {/* Type engine design */}
          <div className="border-b border-gray-400 w-full h-10 flex justify-between items-center mb-4">
             <div className="flex min-h-full ">
-               <div className="after:content-[''] after:bg-green-400 after:absolute relative after:top-1/2 after:-translate-1/2 after:-right-6 after:w-4 after:h-4 after:rounded-full"></div>
+               <div className="after:content-[''] after:bg-green-400 after:absolute relative after:top-1/2 after:-translate-1/2 after:-right-6 after:w-3 after:h-3 after:rounded-full"></div>
 
-               <div className="after:content-[''] after:bg-orange-400 after:absolute relative after:top-1/2 after:-translate-1/2 after:-right-12 after:w-4 after:h-4 after:rounded-full"></div>
+               <div className="after:content-[''] after:bg-orange-400 after:absolute relative after:top-1/2 after:-translate-1/2 after:-right-11 after:w-3 after:h-3 after:rounded-full"></div>
 
-               <div className="after:content-[''] after:bg-red-400 after:absolute relative after:top-1/2 after:-translate-1/2 after:-right-18 after:w-4 after:h-4 after:rounded-full"></div>
+               <div className="after:content-[''] after:bg-red-400 after:absolute relative after:top-1/2 after:-translate-1/2 after:-right-16 after:w-3 after:h-3 after:rounded-full"></div>
                
             </div>
             <span className="text-gray-300">mohaammad.ts</span>
@@ -27,7 +27,7 @@ export default function TypeEngine(){
 
          {/* type engine */}
          <TypeIt className="text-lg w-full" options={{
-            speed:40,
+            speed:75,
             waitUntilVisible: true,
          }}>
             <span className="text-blue-400">const </span>
