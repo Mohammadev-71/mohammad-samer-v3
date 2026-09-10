@@ -91,7 +91,7 @@ export default function Contact() {
 
 
         <div className="mx-auto mb-12 flex max-w-3xl flex-col items-center gap-4 text-center  animate-popIn [animation-duration:0.5s] ">
-          <CommentBox commit={t("commit")} />
+          <CommentBox comment={t("commit")} />
           <h1 className="text-center text-3xl md:text-4xl font-bold  text-emerald-700 dark:text-emerald-500">
             {t("title")}
           </h1>
