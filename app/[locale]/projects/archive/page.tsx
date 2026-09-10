@@ -75,7 +75,7 @@ export default function Projects() {
 
 
         {/* Title container: */}
-        <div className="mb-8 flex items-end justify-between gap-4 animate-popIn [animation-duration:0.5s]">
+        <div className="mb-20 flex items-end justify-between gap-4 animate-popIn [animation-duration:0.5s] ">
           <div className="w-full flex flex-col justify-center items-center gap-4">
 
             {/* Comment box" */}

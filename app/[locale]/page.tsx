@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 import TypeEngine from "./components/TypeEngine";
 import Image from "next/image";
 import CommentBox from "./components/commentBox";
+import {Link as IntLink} from "@/i18n/navigation";
 export default function Home() {
   const t = useTranslations("home");
   return (
@@ -40,14 +41,12 @@ export default function Home() {
               {t("buttons.viewCV")}
             </a>
 
-            <a
+            <IntLink
               className="px-4 py-3 min-w-30 text-center border border-emerald-600 dark:border-gray-300 rounded-lg  text-emerald-700 dark:text-gray-300 text-lg font-bold"
-              href="/mohammad-cv.pdf"
-              target="_blank "
-              rel="noopener noreferrer"
+              href="/projects"
             >
               {t("buttons.projects")}
-            </a>
+            </IntLink>
           </div>
         </div>
 
