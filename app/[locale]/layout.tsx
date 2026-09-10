@@ -23,7 +23,9 @@ export default async function RootLayout({ children, params }:{children:React.Re
       suppressHydrationWarning
       className={`h-full antialiased`}
     >
-
+      <head>
+        <meta name="google-site-verification" content="f5vN26TV3DWJBgHfYc8rYgUNV8HXqVFj4qak6BDj11M" />
+      </head>
 
       <body className="min-h-full flex flex-col bg-white dark:bg-black">
         <ThemeProvider 
