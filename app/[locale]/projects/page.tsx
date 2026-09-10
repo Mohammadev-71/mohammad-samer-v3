@@ -84,7 +84,7 @@ export default function Projects() {
         </div>
 
         {/* Projects container: */}
-        <div className="relative flex flex-warp justify-center items-center min-h-auto">
+        <div className="relative flex flex-warp justify-center items-center min-h-auto gap-10" >
           {!isLoading ? (
             projects.map((project) => (
               <article
